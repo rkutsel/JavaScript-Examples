@@ -11,13 +11,13 @@ function callBack(arg) {
 }
 setTimeout(() => {
 	isNumberCallBack("abc", callBack);
-}, 400);
+}, 300);
 setTimeout(() => {
 	isNumberCallBack("@#$", callBack);
 }, 400);
 setTimeout(() => {
 	isNumberCallBack(10, callBack);
-}, 400);
+}, 500);
 
 // 2. Promises is another way to deal with async JS. It was added in ES2015.
 function isNumberPromise(arg) {
