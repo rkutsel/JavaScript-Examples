@@ -20,10 +20,10 @@ setTimeout(() => {
 }, 400);
 
 // 2. Promises is another way to deal with async JS. It was added in ES2015.
-function promiseFunction(arg) {
+function isNumberPromise(arg) {
 	return new Promise((resolve, reject) => {
 		try {
-			console.log("Waiting for a new promise...");
+			console.log("Waiting for a new promise...\n");
 			setTimeout(() => {
 				if (typeof arg === "number") {
 					resolve(`${arg} is a number!`);
@@ -36,18 +36,18 @@ function promiseFunction(arg) {
 }
 
 setTimeout(() => {
-	promiseFunction(110)
+	isNumberPromise(110)
 		.then((data) => console.log(data))
 		.then(() => console.log(true));
 }, 1500);
 setTimeout(() => {
-	promiseFunction("110")
+	isNumberPromise("110")
 		.then((data) => console.log(data))
 		.then(() => console.log(false));
 }, 2000);
 
 // 3. Async/await is a a syntactic sugar for Promise objects. It was introduced in in ES2017.
-async function asyncFunction(arg) {
+async function isNumberAsync(arg) {
 	await asyncResolve(arg);
 }
 
@@ -64,9 +64,9 @@ async function asyncResolve(arg) {
 	}
 }
 setTimeout(() => {
-	asyncFunction(23).then(() => console.log(true));
+	isNumberAsync(23).then(() => console.log(true));
 }, 4000);
 
 setTimeout(() => {
-	asyncFunction("data").then(() => console.log(false));
+	isNumberAsync("data").then(() => console.log(false));
 }, 5100);
