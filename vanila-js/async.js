@@ -46,7 +46,7 @@ setTimeout(() => {
 		.then(() => console.log(false));
 }, 2000);
 
-// 3. Async/await is a a syntactic sugar for Promise objects. It was introduced in in ES2017.
+// 3. Async/await is a a syntactic sugar for Promise objects. It was introduced in ES2017.
 async function isNumberAsync(arg) {
 	await asyncResolve(arg);
 }
