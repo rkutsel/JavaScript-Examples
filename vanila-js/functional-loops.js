@@ -39,6 +39,30 @@ const mapLoop = characterNames.map((element) => {
 	return newObject;
 });
 
+const productName = {
+	product_name: "Laptop",
+	price: 700.0,
+	stock: 10,
+	tagIds: [1, 2, 3, 4, 5],
+};
+
+const productTagMap = productName.tagIds.map((tag_id) => {
+	return {
+		product_id: 1,
+		tag_id, //shortcut for tag_id: tag_id
+	};
+});
+
+console.log(productTagMap);
+
+// generates a new array with key/value items [
+// 	({ product_id: 1, tag_id: 1 },
+// 	{ product_id: 1, tag_id: 2 },
+// 	{ product_id: 1, tag_id: 3 },
+// 	{ product_id: 1, tag_id: 4 },
+// 	{ product_id: 1, tag_id: 5 })
+// ];
+
 setTimeout(forEachLoop, 500);
 setTimeout(filterLoop, 1000);
 setTimeout(() => {
